@@ -8,7 +8,7 @@ def run_kafka_server():
     # TODO fill in blanks
     producer = producer_server.ProducerServer(
         input_file=input_file,
-        topic="org.udacity.datastreaming.project2.callevents"
+        topic="org.udacity.datastreaming.project2.callevents",
         #bootstrap_servers="",
         #client_id=""
     )
