@@ -1,0 +1,7 @@
+﻿maxRatePerPartition,startingOffsets,numInputRows batch 1,inputRowsPerSecond batch 1,processedRowsPerSecond batch 1,delta,numInputRows ,inputRowsPerSecond ,processedRowsPerSecond ,delta
+100,earliest,199,11.453,5.547,5.906,199,2.071,1.9045,0.1665
+1000,earliest,199,14.231,5.5543,8.6767,199,2.6776,2.104,0.5736
+1,earliest,199,11.8898,4.98334,6.90646,199,2.3018,2.1443,0.1575
+100,latest,11,1.01363,0.4211,0.59253,83,1.0017,0.89207,0.10963
+1000,latest,31,1.015261,0.617,0.398261,101,0.99578,0.99537,0.00041
+1,latest,14,0.9975773,0.29922,0.6983573,93,1.00157,0.9332,0.06837

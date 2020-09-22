@@ -37,9 +37,9 @@ def run_spark_job(spark):
         .format("kafka") \
         .option("subscribe", "org.udacity.datastreaming.project2.callevents") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
-        .option("startingOffsets", "earliest") \
+        .option("startingOffsets", "latest") \
         .option("maxOffsetsPerTrigger",200) \
-        .option("maxRatePerPartition", 100) \
+        .option("maxRatePerPartition", 1000) \
         .option("stopGracefullyOnShutdown", "true") \
         .load()
 
@@ -82,18 +82,18 @@ def run_spark_job(spark):
     # TODO write output stream
     
 
-    query = (
-        agg_df
-            .writeStream
-            .format("console")  # memory = store in-memory table (for testing only in Spark 2.0)
-            .queryName("counts")  # counts = name of the in-memory table
-            .outputMode("complete")  # complete = all the counts should be in the table
-            .start()
-    )
+    #query = (
+    #     agg_df
+    #         .writeStream
+    #         .format("console")  # memory = store in-memory table (for testing only in Spark 2.0)
+    #        .queryName("counts")  # counts = name of the in-memory table
+    #         .outputMode("complete")  # complete = all the counts should be in the table
+    #         .start()
+    # )
 
 
     # TODO attach a ProgressReporter
-    query.awaitTermination()
+    #query.awaitTermination()
 
     # TODO get the right radio code json path
     radio_code_json_filepath = "./radio_code.json"
